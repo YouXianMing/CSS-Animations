@@ -1,0 +1,150 @@
+.item-content {
+    position: relative;
+    width: 720px;
+    height: 420px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.bg-image {
+    position: absolute;
+    width: 720px;
+    height: 420px;
+    pointer-events: none;
+}
+
+.item-content h2 {
+    position: absolute;
+    width: 720px;
+    text-align: center;
+    line-height: 300px;
+    font-size: 3rem;
+    font-weight: 100;
+    color: white;
+    pointer-events: none;
+}
+
+
+/*======================== A状态 ========================*/
+
+
+/* h2的A状态 */
+
+.state-A-h2 {
+    left: -100px;
+    opacity: 0.5;
+}
+
+
+/* h2的A状态动画设置 */
+
+.animation-state-A-h2 {
+    animation-name: animation_A_h2;
+    animation-duration: 1s;
+}
+
+
+/* h2的A状态关键帧(从A状态到B状态) */
+
+@keyframes animation_A_h2 {
+    from {
+        left: -100px;
+        opacity: 0.5;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+
+/* img的A状态 */
+
+.state-A-bg-image {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+
+/* img的A状态动画设置 */
+
+.animation-state-A-bg-image {
+    animation-name: animation_A-bg-image;
+    animation-duration: 0.75s;
+}
+
+
+/* img的A状态关键帧(从A状态到B状态) */
+
+@keyframes animation_A-bg-image {
+    from {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+
+/*======================== B状态 ========================*/
+
+
+/* h2的B状态 */
+
+.state-B-h2 {
+    left: 0px;
+}
+
+
+/* h2的B状态动画设置 */
+
+.animation-state-B-h2 {
+    animation-name: animation_B_h2;
+    animation-duration: 0.75s;
+}
+
+
+/* h2的B状态关键帧(从B状态到A状态) */
+
+@keyframes animation_B_h2 {
+    from {
+        left: 0px;
+        opacity: 1;
+    }
+    to {
+        left: -100px;
+        opacity: 0.5;
+    }
+}
+
+
+/* img的B状态 */
+
+.state-B-bg-image {
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+
+/* img的B状态动画设置 */
+
+.animation-state-B-bg-image {
+    animation-name: animation_B-bg-image;
+    animation-duration: 1s;
+}
+
+
+/* img的B状态关键帧(从B状态到A状态) */
+
+@keyframes animation_B-bg-image {
+    from {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+    to {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
